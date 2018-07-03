@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" type="text/css" href="home.css">
+	
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+		<div class="container">	
+			<div class="collapse navbar-collapse d-flex flex-row-reverse " id="navbarSupportedContent">
+				<ul class="nav navbar-nav ">
+					<li class="nav-item dropdown ">
+						<a class="nav-link dropdown-toggle" href="#" id="login_nav" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Olá, Usuário <i class="fa fa-user"></i>
+						</a>
+						<div class="dropdown-menu" aria-labelledby="login_nav">
+						<a class="dropdown-item" href="#">Meu Perfil</a>
+						<a class="dropdown-item" href="#">Editar Perfil</a>
+						<a class="dropdown-item" href="#">Meu Perfil</a>
+						<a class="dropdown-item" href="#">Cadastrar Carro</a>
+						<a class="dropdown-item" href="#">Minhas Reservas</a>
+						<a class="dropdown-item" href="#">Carros Cadastrados</a>
+						<a class="dropdown-item" href="#">Reservas Concluidas</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">Sair</a>
+						</div>
+					</li>
+			</div>
+		</div>
+	</nav>
+
+	<nav>
+		<div class="container">
+			<div class="nav nav-tabs" id="nav-tab" role="tablist">
+				<a class="nav-item nav-link active" id="nav-pesqCarro-tab" data-toggle="tab" href="#nav-pesqCarro" role="tab" aria-controls="nav-pesqCarro" aria-selected="true">Carros <i class="fa fa-car"></i></a>
+				<a class="nav-item nav-link" id="nav-pesqUsuario-tab" data-toggle="tab" href="#nav-pesqUsuario" role="tab" aria-controls="nav-pesqUsuario" aria-selected="false">Usuários <i class="fa fa-user"></i></a>
+			</div>
+		</div>
+	</nav><script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		
+	
+	<div class="container">
+		<div class="tab-content" id="nav-tabContent">
+			<!-- Pesquisar Carro (ABA)-->
+			<div class="tab-pane fade show active" id="nav-pesqCarro" role="tabpanel" aria-labelledby="nav-pesqCarro-tab">
+				<form>
+					<div class="form-row">
+						<div class="form-group col-md-4 offset-md-1">
+							<label for="inputEstado">Estado</label>
+							<select id = "inputEstado" name="estados-brasil" class="form-control">
+								<option value=""></option>
+							</select>	
+						</div>
+						<div class="form-group col-md-4 offset-md-2">
+							<label for="inputCidade">Cidade</label>
+							<select id = "inputCidade" name="cidades-estado" class="form-control">
+							</select>	
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group col-md-4 offset-md-2">
+							<label for="inputNascimento">Data de Nascimento</label>
+							<input class="form-control" id="date" name="date" placeholder="dia/mes/ano" type="text"/>
+							
+						</div>
+					</div>
+				</form>
+			</div>
+			
+			<!-- Pesquisar Usuário (ABA)-->
+			<div class="tab-pane fade" id="nav-pesqUsuario" role="tabpanel" aria-labelledby="nav-pesqUsuario-tab">
+					<form >
+						<div class="form-row">
+							<div class="form-group col-md-8 offset-md-2">
+								<label for="nomeCompleto">Usuário</label>
+								<input type="text" class="form-control" id="nomeCompleto" aria-describedby="emailHelp" placeholder="Nome Completo">
+							</div>
+						</div>
+
+						<div class= "form-row">
+							<div class= "col-md-3 offset-md-8">
+								<button type="submit" class="btn btn-success" id="botaoFinalizar"> Buscar <i class="fa fa-search"></i> </button> 
+			
+							</div>
+						</div>
+					</form>
+			</div>
+		</div>
+
+<!--
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="header">
+					<h3>Cadastrar Carro</h1>
+				</div>
+			</div>
+		</div>
+		<form>
+
+			<div class="form-row">
+				<div class="form-group col-md-8 offset-md-1">
+					<label for="inputTitulo">Titulo</label>
+					<input type="text" class="form-control" id="inputTitulo" placeholder="Adicione um título para identificar seus carros">
+				</div>
+			</div>
+
+			<div class="form-row">
+				<div class="form-group col-md-3 offset-md-1">
+					<label for="inputMarca">Marca</label>
+					<select id = "inputMarca" name="marca" class="form-control">
+						<option value="Toyota">Toyota</option>
+					</select>	
+
+				</div>
+				<div class="form-group col-md-4 offset-md-1">
+					<label for="inputModelo">Modelo</label>
+					<select id = "inputModelo" name="modelo" class="form-control">
+						<option value=""></option>
+					</select>	
+				</div>
+
+				<div class="form-group col-md-1 offset-md-1">
+					<label for="inputAno">Ano</label>
+					<select id = "inputAno" name="ano" class="form-control">
+						<option value=""></option>
+					</select>	
+				</div>
+			</div>
+
+			<div class="form-row">
+				<legend class="col-form-label col-md-11 offset-md-1 pt-0">Câmbio</legend>
+				
+					<div class="form-group col-md-2 offset-md-1">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="cambio" id="cambio_manual" value="manual" checked>
+							<label class="form-check-label" for="cambio_manual">
+							Manual
+							</label>
+						</div>
+
+					</div>
+					<div class="form-group col-md-2 ">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="cambio" id="cambio_automatico" value="automatico">
+							<label class="form-check-label" for="cambio_automatico">
+							Automático
+							</label>
+						</div>
+					</div>
+
+					<div class="form-group col-md-3 ">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="cambio" id="cambio_semiautomatico" value="semiautomatico">
+							<label class="form-check-label" for="cambio_semiautomatico">
+							Semi-Automático
+							</label>
+						</div>
+					</div>
+				
+			</div>
+			
+			<div class="form-row">
+				<legend class="col-form-label col-md-11 offset-md-1 pt-0">Combustível</legend>
+				
+					<div class="form-group col-md-2 offset-md-1">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="combustivel" id="gasolina" value="gasolina" checked>
+							<label class="form-check-label" for="gasolina">
+							Gasolina
+							</label>
+						</div>
+
+					</div>
+					<div class="form-group col-md-2 ">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="combustivel" id="alcool" value="alcool">
+							<label class="form-check-label" for="alcool">
+							Álcool
+							</label>
+						</div>
+					</div>
+
+					<div class="form-group col-md-2 ">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="combustivel" id="flex" value="flex">
+							<label class="form-check-label" for="flex">
+							Flex
+							</label>
+						</div>
+					</div>
+					<div class="form-group col-md-2 ">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="combustivel" id="gas_natural" value="gas_natural">
+							<label class="form-check-label" for="gas_natural">
+							Gás Natural
+							</label>
+						</div>
+					</div>
+
+					<div class="form-group col-md-2 ">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="combustivel" id="diesel" value="diesel">
+							<label class="form-check-label" for="diesel">
+							Diesel
+							</label>
+						</div>
+					</div>
+			</div>
+
+			<div class="form-row">
+				<legend class="col-form-label col-md-11 offset-md-1 pt-0">Direção</legend>
+				
+					<div class="form-group col-md-2 offset-md-1">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="direcao" id="hidraulica" value="hidraulica" checked>
+							<label class="form-check-label" for="hidraulica">
+							Hidráulica
+							</label>
+						</div>
+
+					</div>
+					<div class="form-group col-md-2 ">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="direcao" id="eletrica" value="eletrica">
+							<label class="form-check-label" for="eletrica">
+							Elétrica
+							</label>
+						</div>
+					</div>
+					<div class="form-group col-md-2 ">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="direcao" id="mecanica" value="mecanica">
+							<label class="form-check-label" for="mecanica">
+							Mecânica
+							</label>
+						</div>
+					</div>
+					<div class="form-group col-md-2 ">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="direcao" id="assistida" value="assistida">
+							<label class="form-check-label" for="assistida">
+							Assistida
+							</label>
+						</div>
+					</div>
+			</div>
+
+
+			<div class="form-row">
+				<div class="form-group col-md-2 offset-md-1">
+					<label for="inputPotencia">Potência do motor</label>
+					<select id = "inputPotencia" name="potencia" class="form-control">
+						<option value="1.0">1.0</option>
+						<option value="1.2">1.2</option>
+						<option value="1.3">1.3</option>
+						<option value="1.4">1.4</option>
+						<option value="1.5">1.5</option>
+						<option value="1.6">1.6</option>
+						<option value="1.7">1.7</option>
+						<option value="1.8">1.8</option>
+						<option value="1.9">1.9</option>
+						<option value="2.0-2.9">2.0 - 2.9</option>
+						<option value="3.0-3.9">3.0 - 3.9</option>
+						<option value="4.0+">4.0 ou mais</option>
+					</select>	
+
+				</div>
+
+				<div class="form-group col-md-2 offset-md-1">
+					<label for="inputTipoVeic">Tipo de veículo</label>
+					<select id = "inputTipoVeic" name="tipo_veiculo" class="form-control">
+						<option value="Hatch">Hatch</option>
+						<option value="Sedã">Sedã</option>
+						<option value="SUV">SUV</option>
+						<option value="Van-Utilitario">Van/Utilitário</option>
+						<option value="Conversivel">Conversível</option>
+						<option value="Pick-up">Pick-up</option>
+						<option value="Antigo">Antigo</option>
+						<option value="Buggy">Buggy</option>
+						<option value="Passeio">Passeio</option>
+					</select>	
+
+				</div>
+
+				<div class="form-group col-md-1 offset-md-1">
+					<label for="inputPortas">Portas</label>
+					<select id = "inputPortas" name="num_portas" class="form-control">
+						<option value="2Portas">2</option>
+						<option value="4Portas">4</option>
+					</select>	
+				</div>
+
+				<div class="form-group col-md-2 offset-md-1">
+					<label for="inputTipoVeic">Cor</label>
+					<select id = "inputTipoVeic" name="tipo_veiculo" class="form-control">
+						<option value="Preto">Preto</option>
+						<option value="Branco">Branco</option>
+						<option value="Prata">Prata</option>
+						<option value="Vermelho">Vermelho</option>
+						<option value="Cinza">Cinza</option>
+						<option value="Azul">Azul</option>
+						<option value="Amarelo">Amarelo</option>
+						<option value="Verde">Verde</option>
+						<option value="Laranja">Laranja</option>
+						<option value="Outra">Outra</option>
+					</select>	
+
+				</div>
+			</div>
+
+			<div class="form-row">
+				<div class="form-group col-md-3 offset-md-1">
+					<label for="inputPlaca">Placa</label>
+					<input type="text" class="form-control" id="inputPlaca" placeholder="Obrigatório*">
+				</div>
+				<div class="form-group col-md-5 offset-md-2">
+					<label for="inputChassi">Chassi</label>
+					<input type="text" class="form-control" id="inputChassi" placeholder="Obrigatório*">
+				</div>
+			</div>
+
+
+			<div class="form-row">
+				<legend class="col-form-label col-md-11 offset-md-1 pt-0">Opcionais</legend>
+				<div class="form-check form-check-inline  col-md-3 offset-md-1">
+					<input class="form-check-input" type="checkbox" id="airBag" value="airBag">
+					<label class="form-check-label" for="airBag">Air bag</label>
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="form-check form-check-inline col-md-3 offset-md-1">
+					<input class="form-check-input" type="checkbox" id="arCondicionado" value="arCondicionado">
+					<label class="form-check-label" for="arCondicionado">Ar condicionado</label>
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="form-check form-check-inline col-md-3 offset-md-1">
+					<input class="form-check-input" type="checkbox" id="alarme" value="alarme">
+					<label class="form-check-label" for="alarme">Alarme</label>
+				</div>
+			</div>
+			
+			<div class="form-row">
+				<div class="form-check form-check-inline  col-md-3 offset-md-1">
+					<input class="form-check-input" type="checkbox" id="travaEletrica" value="travaEletrica">
+					<label class="form-check-label" for="travaEletrica">Trava elétrica</label>
+				</div>
+			</div>
+			
+			<div class="form-row">
+				<div class="form-check form-check-inline col-md-3 offset-md-1">
+					<input class="form-check-input" type="checkbox" id="som" value="som">
+					<label class="form-check-label" for="som">Som</label>
+				</div>
+			</div>
+			
+			<div class="form-row">
+				<div class="form-check form-check-inline  col-md-3 offset-md-1">
+					<input class="form-check-input" type="checkbox" id="vidroEletrico" value="vidroEletrico">
+					<label class="form-check-label" for="vidroEletrico">Vidro elétrica</label>
+				</div>
+			</div>	
+			
+			<div class="form-row">
+				<div class="form-check form-check-inline col-md-3 offset-md-1">
+					<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+					<label class="form-check-label" for="inlineCheckbox1">Blindado</label>
+				</div>
+			</div>
+			
+			<div class="form-row">
+				<div class="form-check form-check-inline  col-md-3 offset-md-1">
+					<input class="form-check-input" type="checkbox" id="sensorRe" value="sensorRe">
+					<label class="form-check-label" for="sensorRe">Sensor de ré</label>
+				</div>
+			</div>
+
+			<div class="form-row">
+				<div class="form-check form-check-inline  col-md-3 offset-md-1">
+					<input class="form-check-input" type="checkbox" id="cameraRe" value="cameraRe">
+					<label class="form-check-label" for="cameraRe">Câmera de ré</label>
+				</div>
+			</div>
+
+			<div class="form-row">
+				<div class="form-group col-md-4 offset-md-1">
+					<label for="inputCepVeic" id="CepVeic" >Cep do veículo</label>
+					<input type="text" class="form-control" id="inputCepVeic" placeholder="96060-520">
+				</div>
+
+			</div>
+			<div class="form-row">
+				<div class="form-group col-md-6 offset-md-1">
+					<label for="inputDescricao"  >Descrição do veículo</label>
+					<textarea class="form-control" id="inputDescricao" rows="3"></textarea>
+				</div>
+				<div class="form-group col-md-3 offset-md-1">
+					<label for="inputDiaria">Preço da diária</label>
+					<input type="textArea" class="form-control" id="inputDiaria" placeholder="R$ 50,00">
+				</div>
+			</div>
+
+			<div class="form-row">
+				<div class="form-group offset-md-1">
+					<label for="documentacao">Documentação</label>
+					<input type="file" class="form-control-file" id="documentacao">
+				</div>
+			</div>
+
+			<div class="form-row">
+				<div class="form-check form-check-inline  col-md-4 offset-md-1">
+					<input type="checkbox" class="form-check-input" id="termoUso" checked>
+					<label class="form-check-label" for="termoUso"> Concordo com os termos de uso</label>
+				</div>
+			</div>
+
+			<div class= "form-row">
+				<div class= "col-md-3 offset-md-8">
+					<button type="submit" class="btn btn-success" id="botaoFinalizar"> Finalizar </button> 
+					
+				</div>
+			</div>
+			
+			
+		</form>
+	</div>
+-->
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="bootstrap-datepicker.pt-BR.js"></script>
+	
+<script>
+		
+		$(document).ready(function(){
+			var date_input=$('input[name="date"]'); //our date input has the name "date"
+			var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+			date_input.datepicker({
+				format: 'dd/mm/yyyy',
+				language: "pt-BR"
+			})
+		})
+		
+	</script>
+<!--
+	
+-->
+	<!--<script type="text/javascript">	
+		
+		$('.nav-tab a[href="#nav-pesqCarro"]').ready(function () {
+		
+			$.getJSON('https://gist.githubusercontent.com/ografael/2037135/raw/5d31e7baaddd0d599b64c3ec04827fc244333447/estados_cidades.json', function (data) {
+
+				var items = [];
+				var options = '<option value="">Escolha um estado</option>';	
+
+				$.each(data, function (key, val) {
+					options += '<option value="' + val.nome + '">' + val.nome + '</option>';
+				});					
+				$("#inputEstado").html(options);				
+				
+				$("#inputEstado").change(function () {				
+				
+					var options_cidades = '';
+					var str = "";					
+					
+					$("#inputEstado option:selected").each(function () {
+						str += $(this).text();
+					});
+					
+					$.each(data, function (key, val) {
+						if(val.nome == str) {							
+							$.each(val.cidades, function (key_city, val_city) {
+								options_cidades += '<option value="' + val_city + '">' + val_city + '</option>';
+							});							
+						}
+					});
+
+					$("#inputCidade").html(options_cidades);
+					
+				}).change();		
+			
+			});
+		
+		});
+		
+	</script>
+-->
+
+
+	
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html >
+<html>
+<head>
+	<title>Cadastrar Usuario</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" type="text/css" href="cadastrar_usuario.css">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript">	
+		
+		$(document).ready(function () {
+		
+			$.getJSON('https://gist.githubusercontent.com/ografael/2037135/raw/5d31e7baaddd0d599b64c3ec04827fc244333447/estados_cidades.json', function (data) {
+
+				var items = [];
+				var options = '<option value="">Escolha um estado</option>';	
+
+				$.each(data, function (key, val) {
+					options += '<option value="' + val.nome + '">' + val.nome + '</option>';
+				});					
+				$("#inputEstado").html(options);				
+				
+				$("#inputEstado").change(function () {				
+				
+					var options_cidades = '';
+					var str = "";					
+					
+					$("#inputEstado option:selected").each(function () {
+						str += $(this).text();
+					});
+					
+					$.each(data, function (key, val) {
+						if(val.nome == str) {							
+							$.each(val.cidades, function (key_city, val_city) {
+								options_cidades += '<option value="' + val_city + '">' + val_city + '</option>';
+							});							
+						}
+					});
+
+					$("#inputCidade").html(options_cidades);
+					
+				}).change();		
+			
+			});
+		
+		});
+	
+	</script>
+</head>
+<body>
+	<!-- Imagem de login na navbar -->
+	<nav class="navbar navbar-light bg-light">
+		<div class="container">
+			<a class="navbar-brand" href="#">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a id ="login_nav" href="#login">Login <i class="fa fa-user"></i></a></li>
+				</ul>
+			</a>
+		</div>
+	</nav>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="header">
+					<h3>Cadastrar Usuário</h1>
+				</div>
+			</div>
+		</div>
+		<form>
+
+			<div class="form-row">
+				<div class="form-group col-md-8 offset-md-1">
+					<label for="inputName">Nome Completo</label>
+					<input type="text" class="form-control" id="inputName" placeholder="Obrigatório*">
+				</div>
+			</div>
+
+			<div class="form-row">
+				<div class="form-group col-md-4 offset-md-1">
+					<label for="inputCPF">CPF</label>
+					<input type="text" class="form-control" id="inputCPF" placeholder="Obrigatório*">
+				</div>
+				<div class="form-group col-md-4 offset-md-2">
+					<label for="inputRG">RG</label>
+					<input type="text" class="form-control " id="inputRG" placeholder="Obrigatório*">
+				</div>
+			</div>
+
+			<div class="form-row">
+				<div class="form-group col-md-4 offset-md-1">
+					<label for="inputSexo">Sexo</label>
+					<select id="inputSexo" class="form-control">
+						<option selected>Feminino</option>
+						<option>Masculino</option>
+					</select>
+				</div>
+				<div class="form-group col-md-4 offset-md-2">
+					<label for="inputNascimento">Data de Nascimento</label>
+					<input class="form-control" id="date" name="date" placeholder="dia/mes/ano" type="text"/>
+					
+				</div>
+			</div>
+
+			<div class="form-row">
+				<div class="form-group col-md-8 offset-md-1">
+					<label for="inputEmail">Email</label>
+					<input type="email" class="form-control" id="inputEmail" placeholder="Obrigatório*">
+				</div>
+			</div>
+
+			<div class="form-row">
+				<div class="form-group col-md-8 offset-md-1">
+					<label for="inputEndereco">Endereço</label>
+					<input type="text" class="form-control" id="inputEndereco" placeholder="Obrigatório*">
+				</div>
+			</div>
+
+			<div class="form-row">
+				<div class="form-group col-md-4 offset-md-1">
+					<label for="inputEstado">Estado</label>
+					<select id = "inputEstado" name="estados-brasil" class="form-control">
+						<option value=""></option>
+					</select>	
+				</div>
+				<div class="form-group col-md-4 offset-md-2">
+					<label for="inputCidade">Cidade</label>
+					<select id = "inputCidade" name="cidades-estado" class="form-control">
+					</select>	
+				</div>
+			</div>
+
+			<div class="form-row">
+				<div class="form-group col-md-4 offset-md-1">
+					<label for="inputTelefone">Telefone</label>
+					<input class="form-control" id="inputTelefone" placeholder="Obrigatório*" type="text"/>
+				</div>
+			</div>
+
+			<div class="form-row">
+				<div class="form-group col-md-4 offset-md-1">
+					<label for="inputSenha">Senha</label>
+					<input type="password" class="form-control" id="inputSenha" placeholder="Obrigatório*">
+				</div>
+				<div class="form-group col-md-4 offset-md-2">
+					<label for="inputConfSenha">Confirmar Senha</label>
+					<input type="password" class="form-control " id="inputConfSenha" placeholder="Obrigatório*">
+				</div>
+			</div>
+			
+			<div class="form-row">
+				<div class="form-check form-check-inline  col-md-4 offset-md-1">
+					<input type="checkbox" class="form-check-input" id="termoUso" checked>
+					<label class="form-check-label" for="termoUso"> Concordo com os termos de uso</label>
+				</div>
+			</div>
+			
+			<div class= "form-row">
+				<div class= "col-md-3 offset-md-8">
+					<button type="submit" class="btn btn-success" id="botaoFinalizar"> Salvar Alterações </button> 
+				</div>
+			</div>
+			</form>
+	</div>
+
+
+	<!-- Include Date Range Picker -->
+
+<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+-->	
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+	<script src="bootstrap-datepicker.pt-BR.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			var date_input=$('input[name="date"]'); //our date input has the name "date"
+			var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+			date_input.datepicker({
+				format: 'dd/mm/yyyy',
+				language: "pt-BR"
+			})
+		})
+	</script>
+
+
+		
+
+</body>
+</html>
