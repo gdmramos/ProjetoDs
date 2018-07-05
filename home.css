@@ -54,3 +54,7 @@ html {
 #formUsuario{
 	text-align: center;
 }
+
+#slider12c .slider-selection {
+	background: blue;
+}
