@@ -2,16 +2,15 @@
 <html>
 <head>
  <meta charset="UTF-8"> 
-	<title>Avaliação</title>
+	<title>Perfil Usuário</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
-	<link rel="stylesheet" type="text/css" href="avaliacao.css">
-
-	<script type="text/javascript">		
-
-	</script>
+	<link rel="stylesheet" type="text/css" href="editar_usuario.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript">	
+	</script>		
 </head>
 <body>
 	<nav class="navbar navbar-expand-md navbar-light bg-light ">
@@ -43,72 +42,46 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
-				<div class="header">
-					<h3>Avaliação</h1>
+				<div class="header">					
 				</div>
 			</div>
 		</div>
+		<img src="https://cdn0.iconfinder.com/data/icons/PRACTIKA/256/user.png" class="rounded mx-auto d-block" alt="Responsive image">
 		<form>
 
 			<div class="form-row">
 				<div class="form-group col-md-8 offset-md-1">
-					<label for="inputDialogo">Diálogo com o Locatário</label>
-					
+					<label for="inputUserName">Nome Usuário</label>
 				</div>
-				<div class="form-group col-md-4 offset-md-2">
-				<div id="stars" class="starrr"></div>
-					
+				<div class="form-group col-md-8 offset-md-4">
+					<!-star rating>
 				</div>
 			</div>
 
 			<div class="form-row">
-				<div class="form-group col-md-8 offset-md-1">
-					<label for="inputCarroLimpo">Carro Limpo</label>
-					
+				<div class="form-group col-md-4 offset-md-1">
+					<label for="inputContato">Contato</label>
 				</div>
-				<div class="form-group col-md-4 offset-md-2">
-			 				
-				</div>
-			</div>
 
-			<div class="form-row">
-				<div class="form-group col-md-8 offset-md-1">
-					<label for="inputVeracidade">Veracidade em Relação ao Anúncio</label>
-						
+				<div class="form-group col-md-4 offset-md-3">
+					<label for="inputCidade">Mora em Pelotas, RS</label>
 				</div>
-				<div class="form-group col-md-4 offset-md-2">
-					
-				</div>
-			</div>
-	
 
+			</div>
 			<div class="form-row">
-				<div class="form-group col-md-8 offset-md-1">
-					<label for="inputPreco">Preço Justo</label>
-					
-				</div>
 				<div class="form-group col-md-4 offset-md-2">
-					
+					<label for="inputEmail">Email: usuario@gmail.com</label>
 				</div>
 			</div>
-
 			<div class="form-row">
-				<div class="form-group col-md-8 offset-md-1">
-					<label for="inputComprometimento">Comprometimento com o Cliente</label>
-					
-				</div>
 				<div class="form-group col-md-4 offset-md-2">
-					
+					<label for="inputTelefone">Telefone: (53)9999-9999</label>
 				</div>
 			</div>
-			
+			</br>
 			<div class= "form-row">
 				<div class= "col-6 col-md-2 offset-md-1">
-					<button type="submit" class="btn btn-danger" id="botaoCancelar"> Cancelar </button> 
-
-				</div>
-				<div class= " col-6 col-md-2 offset-md-6">
-					<button type="submit" class="btn btn-success" id="botaoFinalizar"> Finalizar </button> 
+					<button type="submit" class="btn btn-outline-info" id="botaoCarros_User"> Carros Disponíveis </button> 
 
 				</div>
 
