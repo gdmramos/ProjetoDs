@@ -46,3 +46,39 @@ html {
 .dropdown:hover>.dropdown-menu {
     display: block;
 }
+
+/* Stars */
+.starrating > input {display: none;}  /* Remove radio buttons */
+
+.starrating > label:before { 
+  content: "\f005"; /* Star */
+  display: inline-block; 
+}
+
+.starrating > label{
+  color: gainsboro; /* Start color when not clicked */
+}
+
+.starrating > input:checked ~ label
+{ color: gold; } /* Set yellow color when star checked */
+
+.starrating > input:hover ~ label
+{ color: gold;  } /* Set yellow color when star hover */
+
+
+.reverse { display: flex; flex-direction: row-reverse; }
+
+label.fa-star:hover { transform:  scale(1.5); }
+
+label {
+  padding-left:0.5em;
+}
+
+
+@media (min-width: 769px) {
+    .form-row{
+        text-align: right;
+    }
+}
+
+
