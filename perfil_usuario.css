@@ -60,7 +60,7 @@ html {
     display: block;
 }
 
-//* Stars */
+/* Stars */
 .starrating > input {display: none;}  /* Remove radio buttons */
 
 .starrating > label:before { 
@@ -74,6 +74,7 @@ html {
 
 .starrating > input:checked ~ label
 { color: gold; } /* Set yellow color when star checked */
+
 
 .reverse { display: flex; flex-direction: row-reverse; }
 
