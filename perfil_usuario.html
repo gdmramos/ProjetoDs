@@ -4,13 +4,11 @@
  <meta charset="UTF-8"> 
 	<title>Perfil Usuário</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
-	<link rel="stylesheet" type="text/css" href="editar_usuario.css">
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-	<script type="text/javascript">	
-	</script>		
+	<link rel="stylesheet" type="text/css" href="perfil_usuario.css">
+		
 </head>
 <body>
 	<nav class="navbar navbar-expand-md navbar-light bg-light ">
@@ -50,21 +48,30 @@
 		<form>
 
 			<div class="form-row">
-				<div class="form-group col-md-8 offset-md-1">
+				<div class="col-md-8 offset-md-1">
 					<label for="inputUserName">Nome Usuário</label>
 				</div>
-				<div class="form-group col-md-8 offset-md-4">
-					<!-star rating>
+			</div>
+
+			<div class="form-row">
+				<div class="col-md-4 offset-md-2">
+					<div class="form-group reverse starrating offset-md-1">
+					<input type="radio" id="star5_preco" name="preco" value="5" onclick="javascript: return false;" /><label class="fas fa-star" for="star5_preco" title="5 estrelas"></label>  
+		            <input type="radio" id="star4_preco" name="preco" value="4" /><label class="fas fa-star" for="star4_preco" title="4 estrelas"></label>
+		            <input type="radio" id="star3_preco" name="preco" value="3" /><label class="fas fa-star" for="star3_preco" title="3 estrelas"></label>
+		            <input type="radio" id="star2_preco" name="preco" value="2" /><label class="fas fa-star" for="star2_preco" title="2 estrelas"></label>
+		            <input type="radio" id="star1_preco" name="preco" value="1" /><label class="fas fa-star" for="star1_preco" title="1 estrela"></label>
 				</div>
+				</div>
+				<div class="form-group col-md-4 offset-md-1">
+					<label for="inputCidade">Mora em Pelotas, RS</label>
+				</div>
+
 			</div>
 
 			<div class="form-row">
 				<div class="form-group col-md-4 offset-md-1">
 					<label for="inputContato">Contato</label>
-				</div>
-
-				<div class="form-group col-md-4 offset-md-3">
-					<label for="inputCidade">Mora em Pelotas, RS</label>
 				</div>
 
 			</div>

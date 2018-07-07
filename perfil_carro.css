@@ -32,23 +32,10 @@ html {
     text-align: center;
 }
 
-#botaoCarros_User{
+#botaoFinalizar{
 	margin-bottom: 5em;
 	position: absolute;
 	right: 0;
-}
-
-.btn-outline-info:hover {
-    color: #fff;
-    background-color: #17a2b8;
-    border-color: #17a2b8;
-}
-
-.btn-outline-info {
-    color: #17a2b8;
-    background-color: transparent;
-    background-image: none;
-    border-color: #17a2b8;
 }
 
 
@@ -60,7 +47,7 @@ html {
     display: block;
 }
 
-//* Stars */
+/* Stars */
 .starrating > input {display: none;}  /* Remove radio buttons */
 
 .starrating > label:before { 
@@ -75,8 +62,19 @@ html {
 .starrating > input:checked ~ label
 { color: gold; } /* Set yellow color when star checked */
 
+
 .reverse { display: flex; flex-direction: row-reverse; }
+
 
 label {
   padding-left:0.5em;
 }
+
+
+@media (min-width: 769px) {
+    .form-row{
+        text-align: right;
+    }
+}
+
+
