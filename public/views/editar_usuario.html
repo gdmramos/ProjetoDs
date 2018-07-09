@@ -2,52 +2,16 @@
 <html>
 <head>
 	<title>Editar Perfil</title>
+
+	<!-- ### Bootstrap ### -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<!-- ### Fontes ### -->
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
-	<link rel="stylesheet" type="text/css" href="editar_usuario.css">
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-	<script type="text/javascript">	
-		
-		$(document).ready(function () {
-		
-			$.getJSON('https://gist.githubusercontent.com/ografael/2037135/raw/5d31e7baaddd0d599b64c3ec04827fc244333447/estados_cidades.json', function (data) {
-
-				var items = [];
-				var options = '<option value="">Escolha um estado</option>';	
-
-				$.each(data, function (key, val) {
-					options += '<option value="' + val.nome + '">' + val.nome + '</option>';
-				});					
-				$("#inputEstado").html(options);				
-				
-				$("#inputEstado").change(function () {				
-				
-					var options_cidades = '';
-					var str = "";					
-					
-					$("#inputEstado option:selected").each(function () {
-						str += $(this).text();
-					});
-					
-					$.each(data, function (key, val) {
-						if(val.nome == str) {							
-							$.each(val.cidades, function (key_city, val_city) {
-								options_cidades += '<option value="' + val_city + '">' + val_city + '</option>';
-							});							
-						}
-					});
-
-					$("#inputCidade").html(options_cidades);
-					
-				}).change();		
-			
-			});
-		
-		});
-		
-	</script>		
+	<!-- ### Estilos Gerais ### -->
+	<link rel="stylesheet" type="text/css" href="../assets/css/editar_usuario.css">
 </head>
 <body>
 	<nav class="navbar navbar-expand-md navbar-light bg-light ">
@@ -150,9 +114,11 @@
 			</div>
 			</form>
 	</div>
-
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="../assets/js/form_city.js"></script>
+<!-- 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
 
 </body>
 </html>

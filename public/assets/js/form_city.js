@@ -1,19 +1,10 @@
 $(document).ready(function () {
-
-	// $.getJSON('https://gist.githubusercontent.com/ografael/2037135/raw/5d31e7baaddd0d599b64c3ec04827fc244333447/estados_cidades.json', function (data) {
-		var estados = [{
-			"sigla": "AC",
-			"cidades": ["Acrilândia","Assis Brasil"]
-		},
-		{
-			"sigla": "SP",
-			"cidades": ["São Paulo","Sorocaba"]
-		}];
-
+	$.getJSON('https://gist.githubusercontent.com/ografael/2037135/raw/5d31e7baaddd0d599b64c3ec04827fc244333447/estados_cidades.json', function (data) {
+		
 		var items = [];
 		var options = '<option value="">Escolha um estado</option>';	
 
-		$.each(estados, function (key, val) {
+		$.each(data, function (key, val) {
 			options += '<option value="' + val.sigla + '">' + val.sigla + '</option>';
 		});					
 		$("#inputEstado").html(options);				
@@ -27,7 +18,7 @@ $(document).ready(function () {
 				str += $(this).text();
 			});
 			
-			$.each(estados, function (key, val) {
+			$.each(data, function (key, val) {
 				if(val.sigla == str) {							
 					$.each(val.cidades, function (key_city, val_city) {
 						options_cidades += '<option value="' + val_city + '">' + val_city + '</option>';
@@ -39,6 +30,6 @@ $(document).ready(function () {
 			
 		}).change();		
 
-	// });
+	});
 
 });
