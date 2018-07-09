@@ -4,50 +4,11 @@
 	<title>Cadastrar Carro</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+	<!-- <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css"> -->
 
-	<link rel="stylesheet" type="text/css" href="cadastrar_carro.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/cadastrar_carro.css">
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-	<script type="text/javascript">	
-		
-		$(document).ready(function () {
-		
-			$.getJSON('https://gist.githubusercontent.com/ografael/2037135/raw/5d31e7baaddd0d599b64c3ec04827fc244333447/estados_cidades.json', function (data) {
 
-				var items = [];
-				var options = '<option value="">Escolha um estado</option>';	
-
-				$.each(data, function (key, val) {
-					options += '<option value="' + val.nome + '">' + val.nome + '</option>';
-				});					
-				$("#inputEstado").html(options);				
-				
-				$("#inputEstado").change(function () {				
-				
-					var options_cidades = '';
-					var str = "";					
-					
-					$("#inputEstado option:selected").each(function () {
-						str += $(this).text();
-					});
-					
-					$.each(data, function (key, val) {
-						if(val.nome == str) {							
-							$.each(val.cidades, function (key_city, val_city) {
-								options_cidades += '<option value="' + val_city + '">' + val_city + '</option>';
-							});							
-						}
-					});
-
-					$("#inputCidade").html(options_cidades);
-					
-				}).change();		
-			
-			});
-		
-		});
-		
-	</script>		
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light ">
@@ -95,15 +56,15 @@
 			<div class="form-row">
 				<div class="form-group col-md-3 offset-md-1">
 					<label for="inputMarca">Marca</label>
-					<select id = "inputMarca" name="marca" class="form-control">
-						<option value="Toyota">Toyota</option>
+					<select id="inputMarca" name="marca" class="form-control">
+
 					</select>	
 
 				</div>
 				<div class="form-group col-md-4 offset-md-1">
 					<label for="inputModelo">Modelo</label>
-					<select id = "inputModelo" name="modelo" class="form-control">
-						<option value=""></option>
+					<select id="inputModelo" name="modelo" class="form-control">
+						
 					</select>	
 				</div>
 
@@ -420,6 +381,8 @@
 
 		</form>
 	</div>
+
+	<script src="../assets/js/carros.js"></script>
 
 </body>
 </html>
