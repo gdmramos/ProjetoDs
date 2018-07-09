@@ -50,3 +50,7 @@ html {
 #estado-cidade{
     margin-top:1.2em;
 }
+
+.dragdrop-area {
+    border: 1px dashed #222;
+}

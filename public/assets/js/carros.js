@@ -1,6 +1,10 @@
 $(document).ready(function () {
 	// $.getJSON('../datasets/marcas.json', function (data) {
+
+		// Simplificação de marcas e modelos só para testes Offline
 		var marcas = [{"name": "AUDI", "fipe_name": "Audi", "order": 2, "key": "audi-6", "id": 6}, {"name": "BMW", "fipe_name": "BMW", "order": 2, "key": "bmw-7", "id": 7}, {"name": "CITROEN", "fipe_name": "Citro\u00ebn", "order": 2, "key": "citroen-13", "id": 13}];
+
+		// Fazer real requisição dos modelos para api
 		var modelo = [{
 				"name": "Audi", 
 				"model": ["TT", "R8", "A4"]
@@ -14,6 +18,8 @@ $(document).ready(function () {
 				"model": ["Xsara","C3","C4"]
 			}];
 
+
+		// Começo do código efetivamente;
 		var options = '<option value="">Escolha uma marca</option>';	
 
 		$.each(marcas, function (key, val) {

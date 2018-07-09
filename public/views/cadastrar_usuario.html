@@ -2,13 +2,17 @@
 <html>
 <head>
 	<title>Cadastrar Usuario</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+
+	<!-- ### Bootstrap ### -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<!-- ### Fontes ### -->
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<!-- <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css"> -->
 
+	<!-- ### Estilos Gerais ### -->
 	<link rel="stylesheet" type="text/css" href="../assets/css/cadastrar_usuario.css">
-	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 </head>
 <body>
 	<!-- Imagem de login na navbar -->
@@ -27,110 +31,113 @@
 			<div class="col-lg-12">
 				<div class="header">
 					<h3>Cadastrar Usuário</h1>
+					</div>
 				</div>
 			</div>
-		</div>
-		<form>
+			<form>
 
-			<div class="form-row">
-				<div class="form-group col-md-8 offset-md-1">
-					<label for="inputName">Nome Completo</label>
-					<input type="text" class="form-control" id="inputName" placeholder="Obrigatório*">
+				<div class="form-row">
+					<div class="form-group col-md-8 offset-md-1">
+						<label for="inputName">Nome Completo</label>
+						<input type="text" class="form-control" id="inputName" placeholder="Obrigatório*">
+					</div>
 				</div>
-			</div>
 
-			<div class="form-row">
-				<div class="form-group col-md-4 offset-md-1">
-					<label for="inputCPF">CPF</label>
-					<input type="text" class="form-control" id="inputCPF" placeholder="Obrigatório*" size="11">
+				<div class="form-row">
+					<div class="form-group col-md-4 offset-md-1">
+						<label for="inputCPF">CPF</label>
+						<input type="text" class="form-control" id="inputCPF" placeholder="Obrigatório*" size="11">
+					</div>
+					<div class="form-group col-md-4 offset-md-2">
+						<label for="inputRG">RG</label>
+						<input type="text" class="form-control " id="inputRG" placeholder="Obrigatório*">
+					</div>
 				</div>
-				<div class="form-group col-md-4 offset-md-2">
-					<label for="inputRG">RG</label>
-					<input type="text" class="form-control " id="inputRG" placeholder="Obrigatório*">
-				</div>
-			</div>
 
-			<div class="form-row">
-				<div class="form-group col-md-4 offset-md-1">
-					<label for="inputSexo">Sexo</label>
-					<select id="inputSexo" class="form-control">
-						<option selected>Feminino</option>
-						<option>Masculino</option>
-					</select>
-				</div>
-				<div class="form-group col-md-4 offset-md-2">
-					<label for="inputNascimento">Data de Nascimento</label>
-					<input class="form-control" id="date" name="date" placeholder="dia/mes/ano" type="text"/>
-					
-				</div>
-			</div>
+				<div class="form-row">
+					<div class="form-group col-md-4 offset-md-1">
+						<label for="inputSexo">Sexo</label>
+						<select id="inputSexo" class="form-control">
+							<option selected>Feminino</option>
+							<option>Masculino</option>
+						</select>
+					</div>
+					<div class="form-group col-md-4 offset-md-2">
+						<label for="inputNascimento">Data de Nascimento</label>
+						<input class="form-control" id="date" name="date" placeholder="dia/mes/ano" type="text"/>
 
-			<div class="form-row">
-				<div class="form-group col-md-8 offset-md-1">
-					<label for="inputEmail">Email</label>
-					<input type="email" class="form-control" id="inputEmail" placeholder="Obrigatório*">
+					</div>
 				</div>
-			</div>
 
-			<div class="form-row">
-				<div class="form-group col-md-8 offset-md-1">
-					<label for="inputEndereco">Endereço</label>
-					<input type="text" class="form-control" id="inputEndereco" placeholder="Obrigatório*">
+				<div class="form-row">
+					<div class="form-group col-md-8 offset-md-1">
+						<label for="inputEmail">Email</label>
+						<input type="email" class="form-control" id="inputEmail" placeholder="Obrigatório*">
+					</div>
 				</div>
-			</div>
 
-			<div class="form-row">
-				<div class="form-group col-md-4 offset-md-1">
-					<label for="inputEstado">Estado</label>
-					<select id = "inputEstado" name="estados-brasil" class="form-control">
-						<option value=""></option>
-					</select>	
+				<div class="form-row">
+					<div class="form-group col-md-8 offset-md-1">
+						<label for="inputEndereco">Endereço</label>
+						<input type="text" class="form-control" id="inputEndereco" placeholder="Obrigatório*">
+					</div>
 				</div>
-				<div class="form-group col-md-4 offset-md-2">
-					<label for="inputCidade">Cidade</label>
-					<select id = "inputCidade" name="cidades-estado" class="form-control">
-					</select>	
-				</div>
-			</div>
 
-			<div class="form-row">
-				<div class="form-group col-md-4 offset-md-1">
-					<label for="inputTelefone">Telefone</label>
-					<input class="form-control" id="inputTelefone" placeholder="Obrigatório*" type="text"/>
+				<div class="form-row">
+					<div class="form-group col-md-4 offset-md-1">
+						<label for="inputEstado">Estado</label>
+						<select id = "inputEstado" name="estados-brasil" class="form-control">
+							<option value=""></option>
+						</select>	
+					</div>
+					<div class="form-group col-md-4 offset-md-2">
+						<label for="inputCidade">Cidade</label>
+						<select id = "inputCidade" name="cidades-estado" class="form-control">
+						</select>	
+					</div>
 				</div>
-			</div>
 
-			<div class="form-row">
-				<div class="form-group col-md-4 offset-md-1">
-					<label for="inputSenha">Senha</label>
-					<input type="password" class="form-control" id="inputSenha" placeholder="Obrigatório*">
+				<div class="form-row">
+					<div class="form-group col-md-4 offset-md-1">
+						<label for="inputTelefone">Telefone</label>
+						<input class="form-control" id="inputTelefone" placeholder="Obrigatório*" type="text"/>
+					</div>
 				</div>
-				<div class="form-group col-md-4 offset-md-2">
-					<label for="inputConfSenha">Confirmar Senha</label>
-					<input type="password" class="form-control " id="inputConfSenha" placeholder="Obrigatório*">
+
+				<div class="form-row">
+					<div class="form-group col-md-4 offset-md-1">
+						<label for="inputSenha">Senha</label>
+						<input type="password" class="form-control" id="inputSenha" placeholder="Obrigatório*">
+					</div>
+					<div class="form-group col-md-4 offset-md-2">
+						<label for="inputConfSenha">Confirmar Senha</label>
+						<input type="password" class="form-control " id="inputConfSenha" placeholder="Obrigatório*">
+					</div>
 				</div>
-			</div>
-			
-			<div class="form-row">
-				<div class="form-check form-check-inline  col-md-4 offset-md-1">
-					<input type="checkbox" class="form-check-input" id="termoUso" checked>
-					<label class="form-check-label" for="termoUso"> Concordo com os termos de uso</label>
+
+				<div class="form-row">
+					<div class="form-check form-check-inline  col-md-4 offset-md-1">
+						<input type="checkbox" class="form-check-input" id="termoUso" checked>
+						<label class="form-check-label" for="termoUso"> Concordo com os termos de uso</label>
+					</div>
 				</div>
-			</div>
-			
-			<div class= "form-row">
-				<div class= "col-md-3 offset-md-8">
-					<button type="submit" class="btn btn-success" id="botaoFinalizar"> Salvar Alterações </button> 
+
+				<div class= "form-row">
+					<div class= "col-md-3 offset-md-8">
+						<button type="submit" class="btn btn-success" id="botaoFinalizar"> Salvar Alterações </button> 
+					</div>
 				</div>
-			</div>
 			</form>
-	</div>
+		</div>
+		
+		<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script> -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="../assets/js/form_city.js"></script>
 
 
-	<!-- Include Date Range Picker -->
+		<!-- Include Date Range Picker -->
 
-<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
--->	
+	
 	<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
 	<script src="bootstrap-datepicker.pt-BR.js"></script>
@@ -146,8 +153,7 @@
 		})
 	</script> -->
 
-	<script src="../assets/js/form_city.js"></script>
-		
+
 
 </body>
 </html>
