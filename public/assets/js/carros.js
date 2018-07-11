@@ -1,5 +1,8 @@
 $(document).ready(function () {
 	// $.getJSON('../datasets/marcas.json', function (data) {
+		console.log('teste');
+		
+		
 
 		// Simplificação de marcas e modelos só para testes Offline
 		var marcas = [{"name": "AUDI", "fipe_name": "Audi", "order": 2, "key": "audi-6", "id": 6}, {"name": "BMW", "fipe_name": "BMW", "order": 2, "key": "bmw-7", "id": 7}, {"name": "CITROEN", "fipe_name": "Citro\u00ebn", "order": 2, "key": "citroen-13", "id": 13}];
