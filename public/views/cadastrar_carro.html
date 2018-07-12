@@ -5,7 +5,7 @@
 	<title>Cadastrar Carro</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	<!-- <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css"> -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans" rel="stylesheet">
 
 	<link rel="stylesheet" type="text/css" href="../assets/css/cadastrar_carro.css">
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
@@ -37,7 +37,7 @@
 	</nav>
 
 	
-	<div class="container">
+	<div class="container content">
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="header">
@@ -365,7 +365,31 @@
 					<span>Ou arraste e solte um documento na área pontilhada.</span>
 				</div>
 			</div>
+			
+			<div class="form-row dragdrop-area dropzone">
+				<div class="form-group offset-md-1">
+					<label for="FotoFrente">Foto de frente do veículo</label>
+					<input type="file" class="form-control-file" id="FotoFrente">
+					<span>Ou arraste e solte um documento na área pontilhada.</span>
+				</div>
+			</div>
 
+			<div class="form-row dragdrop-area dropzone">
+				<div class="form-group offset-md-1">
+					<label for="FotoInterior">Foto do interior do veículo</label>
+					<input type="file" class="form-control-file" id="FotoInterior">
+					<span>Ou arraste e solte um documento na área pontilhada.</span>
+				</div>
+			</div>
+
+			<div class="form-row dragdrop-area dropzone">
+				<div class="form-group offset-md-1">
+					<label for="FotoTraseira">Foto da traseira do veículo</label>
+					<input type="file" class="form-control-file" id="FotoTraseira">
+					<span>Ou arraste e solte um documento na área pontilhada.</span>
+				</div>
+			</div>
+			
 			<div class="form-row">
 				<div class="form-check form-check-inline  col-md-4 offset-md-1">
 					<input type="checkbox" class="form-check-input" id="termoUso" checked>
@@ -373,16 +397,16 @@
 				</div>
 			</div>
 
-			<div class= "form-row">
-				<div class= "col-md-3 offset-md-8">
+			<div class= "form-row ">
+				<div class= "col-md-11 d-flex flex-row-reverse">
 					<button type="submit" class="btn btn-success" id="botaoFinalizar"> Finalizar </button> 
-
 				</div>
 			</div>
 
 
 		</form>
 	</div>
+
 
 	<script src="../assets/js/carros.js"></script>
 
