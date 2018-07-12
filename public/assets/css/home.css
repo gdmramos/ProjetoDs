@@ -20,15 +20,12 @@ html {
 }
 
 
-.fa-user{
-    font-size: 1.2em;
-}
 
-#login_nav{
+#login_nav, #cadastro_nav{
     color:rgba(255,255,255,0.8);
 }
 
-#login_nav:hover{
+#login_nav:hover, #cadastro_nav:hover{
     color:rgba(255,255,255,1);
     text-decoration: None;
 }
