@@ -96,6 +96,18 @@ h3{
     .form-row{
         text-align: right;
     }
+
+    .form-group.divstar.starrating{
+        display: flex;
+        justify-content: center;
+    }
+}
+.form-check-inline .form-check-input, .labelAdicional{
+    margin-left: 1em;
 }
 
+
+.card-body{
+    margin-bottom: -10%;
+}
 
