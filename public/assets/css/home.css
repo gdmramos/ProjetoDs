@@ -1,41 +1,47 @@
 body {
-    background: white;  /* fallback for old browsers */
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 body,
 html {
     width: 100%;
     height: 100%;
-    font-family: "Lato";
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
     color: black;
 }
 
-
-.fa-user{
-    font-size: 1.2em;
+.container.content{
+    background: #f0f0f0;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
-#login_nav{
-    color:rgba(0,0,0,0.7);
+
+
+#login_nav, #cadastro_nav{
+    color:rgba(255,255,255,0.8);
 }
 
-#login_nav:hover{
-    color:rgba(0,0,0,1);
+#login_nav:hover, #cadastro_nav:hover{
+    color:rgba(255,255,255,1);
     text-decoration: None;
 }
 
 .bg-light {
-    background-color: transparent!important;
+    background-color: #0F2027!important;
+    padding: 1em;
 }
 
 .header {
     text-align: center;
 }
 
-#botaoFinalizar{
-	margin-bottom: 5em;
-	position: absolute;
-	right: 0;
+#botaoBuscarU, #botaoBuscarC{
+    position: relative;
+    margin-bottom: 2em;
 }
 
 .dropdown-toggle::after {
@@ -51,4 +57,23 @@ html {
 	text-align: center;
 }
 
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    color: white;
+    font-weight: 700;
+    background-color: #203A43
+}
 
+.nav-tabs .nav-link {
+    color: rgba(255, 255, 255, 0.5);
+    border: 1px solid transparent;
+}
+
+
+label, legend{
+    font-weight: 700;
+}
+
+
+.form-check-label{
+    font-weight: 400;
+}

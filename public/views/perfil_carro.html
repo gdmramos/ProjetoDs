@@ -33,15 +33,15 @@
 					<form>
 						<div class="form-row">
 							<div class="form-group col-md-6">
-								<label for="inputInicioReserva">Início da reserva</label>
-								<input class="form-control" id="fim-reserva" name="date" placeholder="dia/mes/ano" type="text"/>
+								<label class="modal-label" for="inputInicioReserva">Início da reserva</label>
+								<input class="form-control" id="inputInicioReserva" name="date" placeholder="dia/mes/ano" type="text"/>
 							</div>
 							
 						</div>
 						<div class="form-row">
 							<div class="form-group col-md-6">
-								<label for="inputInicioReserva">Fim da reserva</label>
-								<input class="form-control" id="fim-reserva" name="date" placeholder="dia/mes/ano" type="text"/>
+								<label class="modal-label" for="inputFimReserva">Fim da reserva</label>
+								<input class="form-control" id="inputFimReserva" name="date" placeholder="dia/mes/ano" type="text"/>
 							</div>
 						</div>
 					</form>
@@ -95,53 +95,67 @@
 				
 				<div class="row ">
 					<div class="col-md-7 col-sm-6 offset-md-1">
-						<div class="form-group col-md-3">
-							<label for="inputMarca">Marca: Citroen</label>
+						<div class="form-group ">
+							<label for="inputMarca">Marca:</label>
+							<span>Citroen</span>
 						</div>
-						<div class="form-group col-md-3">
-							<label for="inputModelo">Modelo: Aircross</label>		
-						</div>
-
-						<div class="form-row">
-							<div class="form-group col-md-2">
-								<label for="inputAno">Ano: 2006</label>
-							</div>
-							<div class="form-group col-md-4 offset-md-1">
-								<label for="inputCambio">Câmbio: Automático</label>
-							</div>
+						<div class="form-group ">
+							<label for="inputModelo">Modelo:</label>	
+							<span>Aircross</span>	
 						</div>
 
-						<div class="form-group col-md-5">
-							<label for="inputDirecao">Direção: Hidráulica</label>
-						</div>
-						<div class="form-group col-md-5">
-							<label for="inputPotênciaMotor">Potência do Motor: 2.0-2.9</label>
-						</div>
-						<div class="form-group col-md-5">
-							<label for="inputTipoVeiculo">Tipo de Veículo: Passeio</label>
-						</div>
-						<div class="form-row">
-							<div class="form-group col-md-2">
-								<label for="inputPortas">Portas: 4</label>
+						<div class="row">
+							<div class="form-group col-lg-2 col-md-12">
+								<label for="inputAno">Ano:</label>
+								<span>2006</span>
 							</div>
-							<div class="form-group col-md-2 offset-md-1">
-								<label for="inputCor">Cor: Prata</label>
+							<div class="form-group col-lg-4 col-md-12 offset-lg-1">
+								<label for="inputCambio">Câmbio:</label>
+								<span>Automático</span>
 							</div>
 						</div>
-						<div class="form-group col-md-7">
-							<label for="inputModelo">Descrição: Mussum Ipsum, cacilds vidis litro abertis. Manduma pindureta quium dia nois paga. In elementis mé pra quem é amistosis quis leo. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Mé faiz elementum girarzis, nisi eros vermeio. </label>
+
+						<div class="form-group">
+							<label for="inputDirecao">Direção:</label>
+							<span>Hidráulica</span>
 						</div>
-						<div class="form-group col-md-5">
-							<label for="inputPreço">Preço diária: R$ 50,00</label>
+						<div class="form-group">
+							<label for="inputPotênciaMotor">Potência do Motor:</label>
+							<span>2.0-2.9</span>
 						</div>
-						<div class="form-group col-md-5">
-							<label for="inputLocalizacao">Localização: Pelotas, RS</label>
+						<div class="form-group">
+							<label for="inputTipoVeiculo">Tipo de Veículo:</label>
+							<span>Passeio</span>
 						</div>
-						<div class="form-row">
-							<div class="form-group col-md-2">
+						<div class="row">
+							<div class="form-group col-lg-2 col-md-12">
+								<label for="inputPortas">Portas:</label>
+								<span>4</span>
+							</div>
+							<div class="form-group col-lg-2 col-md-12 offset-lg-1">
+								<label for="inputCor">Cor:</label>
+								<span>Prata</span>
+							</div>
+						</div>
+						<div class="row">
+						<div class="form-group col-lg-9">
+							<label for="inputModelo">Descrição:</label>
+							<span>Mussum Ipsum, cacilds vidis litro abertis. Manduma pindureta quium dia nois paga. In elementis mé pra quem é amistosis quis leo. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Mé faiz elementum girarzis, nisi eros vermeio.</span>
+						</div>
+						</div>
+						<div class="form-group">
+							<label for="inputPreço">Preço diária:</label>
+							<span> R$ 50,00</span>
+						</div>
+						<div class="form-group">
+							<label for="inputLocalizacao">Localização:</label>
+							<span> Pelotas, RS</span>
+						</div>
+						<div class="row">
+							<div class="form-group col-lg-2 col-md-12">
 								<label for="inputLocatário">Locatário:</label>
 							</div>
-							<div class="form-group col-md-2 offset-md-1">
+							<div class="form-group col-lg-2 col-md-12 offset-lg-1">
 								<button type="button" class="btn btn-secondary">Ver Perfil</button>
 								
 							</div>
@@ -149,76 +163,83 @@
 					</div>
 					
 					<div class="col-md-4 col-sm-5">	
-						<div class="row justify-content-left">
-
-							<img src="http://www.itavema.com.br/dir_fotos/247/citroen-aircross-frente.jpg" class="rounded float-right" alt="Responsive image">
-						</div>
-						<br/>
-						<div class="row justify-content-center">
-							<div class="form-group col-md-2 col-sm-1 reverse starrating offset-md-1 offset-sm-1">
-								<input type="radio" id="star5" class="star" name="dialogo" value="5" /><label class="fas fa-star" for="star5" 	title="5 estrelas"></label>  
-								<input type="radio" id="star4" class="star" name="dialogo" value="4" /><label class="fas fa-star" for="star4" title="4 estrelas"></label>
-								<input type="radio" id="star3" class="star" name="dialogo" value="3" /><label class="fas fa-star" for="star3" title="3 estrelas"></label>
-								<input type="radio" id="star2" class="star" name="dialogo" value="2" /><label class="fas fa-star" for="star2" title="2 estrelas"></label>
-								<input type="radio" id="star1" class="star" name="dialogo" value="1" /><label class="fas fa-star" for="star1" title="1 estrela"></label>
+						<div class="row d-flex justify-content-left" >
+							
+							<div class="card bg-light ml-3 mr-3" >
+								  <img class="card-img-top" src="http://www.itavema.com.br/dir_fotos/247/citroen-aircross-frente.jpg" class="rounded" alt="Card image cap">
+								  <div class="card-body d-flex justify-content-center">
+									<div class="row center divstar">
+										<div class="form-group divstar   starrating ">
+											<input type="radio" id="star5" class="star" name="dialogo" value="5" /><label class="fas fa-star" for="star5" 	title="5 estrelas"></label>  
+											<input type="radio" id="star4" class="star" name="dialogo" value="4" /><label class="fas fa-star" for="star4" title="4 estrelas"></label>
+											<input type="radio" id="star3" class="star" name="dialogo" value="3" /><label class="fas fa-star" for="star3" title="3 estrelas"></label>
+											<input type="radio" id="star2" class="star" name="dialogo" value="2" /><label class="fas fa-star" for="star2" title="2 estrelas"></label>
+											<input type="radio" id="star1" class="star" name="dialogo" value="1" /><label class="fas fa-star" for="star1" title="1 estrela"></label>
+										</div>
+									</div>
+								    
+								  </div>
 							</div>
+
+								
 						</div>
-						<div class="row justify-content-left offset-md-3">
-							<label for="inputAdicionais">Adicionais</label>
+						<br/>
+						<div class="row  offset-md-3">
+							<label class="labelAdicional" for="inputAdicionais">Adicionais</label>
 						</div>
 						<br/>
 
 						<div class="row justify-content-left">
-							<div class="form-group col-md-3 form-check form-check-inline">
+							<div class="form-group col-lg-4 col-md-12 form-check form-check-inline">
 								<input class="form-check-input" type="checkbox" id="airBag" value="airBag">
 								<label class="form-check-label" for="airBag">Air bag</label>
 							</div>
-							<div class="form-group  col-md-6 form-check form-check-inline offset-md-1">
+							<div class="form-group  col-lg-6 col-md-12 form-check form-check-inline ">
 								<input class="form-check-input" type="checkbox" id="arCondicionado" value="arCondicionado">
 								<label class="form-check-label" for="arCondicionado">Ar condicionado</label>
 							</div>
 						</div>
 						<div class="row justify-content-left">
-							<div class="form-group col-md-3 form-check form-check-inline">
+							<div class="form-group col-lg-3 col-md-12 form-check form-check-inline">
 								<input class="form-check-input" type="checkbox" id="alarme" value="alarme">
 								<label class="form-check-label" for="alarme">Alarme</label>
 							</div>							
-							<div class="form-group col-md-6 form-check form-check-inline offset-md-1">
+							<div class="form-group  col-lg-6 col-md-12 form-check form-check-inline offset-lg-1">
 								<input class="form-check-input" type="checkbox" id="travaEletrica" value="travaEletrica">
 								<label class="form-check-label" for="travaEletrica">Trava elétrica</label>
 							</div>
 						</div>
 						
-						<div class="row justify-content-left">
-							<div class="form-group col-md-3 form-check form-check-inline">
+						<div class="row d-flex justify-content-left">
+							<div class="form-group col-lg-3 col-md-12  form-check form-check-inline">
 								<input class="form-check-input" type="checkbox" id="som" value="som">
 								<label class="form-check-label" for="som">Som</label>
 							</div>
-							<div class=" form-group col-md-6 form-check form-check-inline offset-md-1">
+							<div class=" form-group col-lg-6 col-md-12 form-check form-check-inline offset-lg-1">
 								<input class="form-check-input" type="checkbox" id="vidroEletrico" value="vidroEletrico">
 								<label class="form-check-label" for="vidroEletrico">Vidro elétrica</label>
 							</div>
 						</div>	
 						
 						<div class="row justify-content-left">
-							<div class="form-group col-md-3 form-check form-check-inline ">
+							<div class="form-group col-lg-3 col-md-12 form-check form-check-inline ">
 								<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
 								<label class="form-check-label" for="inlineCheckbox1">Blindado</label>
 							</div>
-							<div class="form-group col-md-6 form-check form-check-inline offset-md-1">
+							<div class="form-group col-lg-6 col-md-12 form-check form-check-inline offset-lg-1">
 								<input class="form-check-input" type="checkbox" id="sensorRe" value="sensorRe">
 								<label class="form-check-label" for="sensorRe">Sensor de ré</label>
 							</div>
 						</div>
 						
 						<div class="row justify-content-left">
-							<div class="form-group col-md-6 form-check form-check-inline">
+							<div class="form-group col-md-12 col-lg-6 form-check form-check-inline">
 								<input class="form-check-input" type="checkbox" id="cameraRe" value="cameraRe">
 								<label class="form-check-label" for="cameraRe">Câmera de ré</label>
 							</div>
 						</div>
 						<br/>
-						<div class="row justify-content-center">
+						<div class="row justify-content-center mb-3">
 							<button type="button" class="btn btn-info" href="#login" data-toggle="modal" data-target="#myModal">Fazer Reserva</button>
 						</div>
 
